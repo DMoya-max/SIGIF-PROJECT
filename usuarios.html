@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Usuarios-SIGIF</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="Usuarios-container">
+          <!-- SIDEBAR VA PRIMERO -->
+        <aside class="sidebar">
+          <div class="logo"> 
+            <h2>ERS-SIGIF</h2>
+          </div>
+
+          <div class="user-Info">
+            <h3>Administrativo</h3>
+            <p>Oficina central</p>
+          </div>
+
+          <nav class="menu">
+            <ul>
+              <li><a href="index.html">Dashboard</a></li>
+              <li><a href="usuarios.html">Usuarios</a></li>
+              <li><a href="productos.html">Productos</a></li>
+              <li><a href="inventario.html">Inventario</a></li>
+              <li><a href="#">Facturación</a></li>
+              <li><a href="#">Auditoría</a></li>
+              <li><a href="#">Configuración</a></li>
+            </ul>
+          </nav>
+
+          <div class="Cerrar-sesion">
+            <button>Cerrar sesión</button>
+          </div>
+        </aside>
+       
+      <!-- CONTENIDO PRINCIPAL DE USUARIOS (Enccabezado!) -->
+      <main class="main-content">
+        <header class="usuarios-header">
+            <h1>Gestión de usuarios</h1>
+            <p>Administra los usuarios del sistema</p>
+        </header>
+
+        <!-- CONTENEDOR DEL LISTADO -->
+        <section class="usuarios-container2">
+
+            <div class="usuarios-header">
+                <div>
+                    <h2>Lista de usuarios</h2>
+                    <p>Usuarios registrados en el sistema</p>
+                </div>
+
+                <button class="btn-nuevo">
+                    <span>👤</span> Nuevo Usuario
+                </button>
+            </div>
+
+            <!-- TARJETAS DE USUARIOS -->
+
+            <div class="tarjetas-usuario">
+                <div class="usu-info">
+                    <strong>Daniel Moya</strong>
+                    <span>dmoya1873@gmail.com</span>
+                </div>
+                <span class="rol admin">Administrador</span>
+            </div>
+
+            <div class="tarjetas-usuario">
+                <div class="usu-info">
+                    <strong>Andres Machado</strong>
+                    <span>machadoandres444@gmail.com</span>
+                </div>
+                <span class="rol admin">Administrador</span>
+            </div>
+
+            <div class="tarjetas-usuario">
+                <div class="usu-info">
+                    <strong>Edwar Granados</strong>
+                    <span>EDWARPIPITA@gmail.com</span>
+                </div>
+                <span class="rol admin">Administrador</span>
+            </div>
+
+            <div class="tarjetas-usuario">
+                <div class="usu-info">
+                    <strong>Felipe Uribe</strong>
+                    <span>felipeuribe778@gmail.com</span>
+                </div>
+                <span class="rol admin">Administrador</span>
+            </div>
+
+        </section>
+
+    </main>
+  </div>
+    <script src="script.js"></script>
+</body>
+</html>
