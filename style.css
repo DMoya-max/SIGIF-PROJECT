@@ -37,21 +37,23 @@ body {
 
 /* SIDEBAR */
 .sidebar {
-  width: 250px;
+  width: 260px;
+  min-width: 260px;
   border-radius: 10px;
   background: var(--fondo-sidebar);
   padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: 5px;
 }
 
-.logo h2 {
-  margin-bottom: 100px;
-  text-align: center;
-  font-size: 30px;
-}
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* rellena sin deformar */
+    border-radius: 8px;
+  }
+
 
 .user-Info {
   text-align: center;
@@ -186,33 +188,6 @@ body {
   line-height: 1.6;
 }
 
-@media (max-width: 900px) {
-
-  /* Sidebar se oculta */
-  .sidebar {
-    display: none;
-  }
-
-  /* El contenido toma todo el ancho */
-  .main-content {
-    width: 100%;
-    margin-left: 0;
-  }
-
-  /* Las métricas y secciones una debajo de otra */
-  .metricas, 
-  .bottom-sections {
-    flex-direction: column;
-    gap: 16px;
-  }
-
-  /* Tarjetas ocupan todo el ancho en móvil */
-  .metricas .tarjetas, 
-  .metricas .TARJETAS {
-    width: 100%;
-  }
-}
-
 /* Estilo de Usuarios*/
 
 /* Contenido general */
@@ -315,45 +290,19 @@ body {
 }
 
 
-/*  RESPONSIVE */
-@media (max-width: 900px) {
-  .sidebar {
-    display: none;
-  }
-
-  .Usuarios-container {
-    justify-content: center;
-  }
-
-  .main-content {
-    width: 95%;
-    padding: 10px;
-  }
-
-  .usuarios-container2 {
-    padding: 15px;
-  }
-
-  .tarjetas-usuario {
-    flex-direction: column;
-    text-align: center;
-    gap: 10px;
-  }
-}
 
 /*Estilo de productos*/
 
 /* Contenido general */
 .productos-container {
   display: flex;
-  width: 100%;
-  min-height: 100vh;
+  height: 100vh; /* ← ESTO ES LO QUE TE FALTABA */
 }
 
 /* Contenido principal */
 .main-content {
   width: 100%;
-  padding: 25px;
+  padding: 205px;
 }
 
 .productos-header h1 {
@@ -492,7 +441,7 @@ body {
 .inventario-container2 {
     margin-top: 20px;
     padding: 20px;
-    background: white;
+    background: var(--blanco);
     border-radius: 15px;
 }
 
@@ -540,8 +489,7 @@ body {
   font-weight: bold;
 }
 
-/*Menu horizontal*/
-
+/*Menu horizontal*/ /*Comparte estilo con el menu de facturacion y con el de auditoria*/
 .menu-horizontal {
     display: flex;
     gap: 15px;
@@ -569,7 +517,7 @@ body {
 /* Boton de agregar al carrito */
 .accion-agregar {
     display: flex;
-    justify-content: flex-end; /* Empuja el contenido hacia la derecha */
+    justify-content: flex-end; 
     margin-top: 10px;
 }
 
@@ -589,7 +537,6 @@ body {
 }
 
 /*Boton pagar*/
-
 .pagar{
     font-size: 20px;
     padding: 10px 30px;
@@ -608,7 +555,7 @@ body {
 /*Historial de movimientos*/
 
 .movimientos {
-    background: #f4f2f2;
+    background: var(--blanco);
     padding: 25px;
     border-radius: 15px;
     margin-top: 20px;
@@ -629,7 +576,7 @@ body {
 }
 
 .tarjeta-mov {
-    background: #e8e6e6;
+    background: var(--fondo-principal);
     padding: 18px;
     border-radius: 15px;
     display: flex;
@@ -645,40 +592,79 @@ body {
 .mov-info p {
     margin: 0;
     font-size: 14px;
-    color: #444;
+    color: var(--texto-claro);
 }
 
-.total {
+.vl2 {
     font-weight: bold;
+    color: var(--positivo);
     font-size: 16px;
     min-width: 140px;
     text-align: right;
 }
 
+/*Estilos de facturacion*/
 
-/*  RESPONSIVE */
-@media (max-width: 900px) {
-  .sidebar {
-    display: none;
-  }
-
-  .invetario-container {
-    justify-content: center;
-  }
-
-  .main-content {
-    width: 95%;
-    padding: 10px;
-  }
-
-  .inventario-container2 {
-    padding: 15px;
-  }
-
-  .tarjetas-inv {
-    flex-direction: column;
-    text-align: center;
-    gap: 10px;
-  }
+/* Contenedor general */
+.facturacion-container {
+    display: flex;  
+    align-items: flex-start;    
+    width: 100%;
 }
+
+.main-content {
+    flex: 1;
+    padding: 30px;
+}
+
+.facturacion-header {
+    margin-bottom: 25px;
+}
+
+/* Contenedor principal */
+.facturacion-container2 {
+    background: white;
+    padding: 35px;
+    border-radius: 15px;
+    width: 100%;
+    margin-top: 20px;   
+}
+
+/* Hacer dos columnas iguales */
+.fac-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.fac-header h2{
+  font-size: 30px;
+}
+
+
+/* Columnas */
+.fac-columna h3 {
+    margin-bottom: 15px;
+}
+
+.fac-columna {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Lista de facturas */
+.fac-lista ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.fac-lista li {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+
 
