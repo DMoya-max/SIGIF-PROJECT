@@ -1,0 +1,743 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Variables*/
+:root {
+  /* Colores base */
+  --fondo-principal: #B8B6B6;
+  --fondo-sidebar: #D1CFCF;
+  --fondo-oscuro: #3F3F3F;
+  --blanco: #FFFFFF;
+  --color-closed: #C53030;
+
+  /* Colores de texto y detalles */
+  --texto-normal: #333333;
+  --texto-claro: #666666;
+
+  /* Colores de estado */
+  --alerta: #D04646;
+  --positivo: #18A50B;
+
+  /* Sombras */
+  --sombra-suave: 0px 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+body {
+  background: var(--fondo-principal);
+}
+
+.Dashboard-container {
+  display: flex;
+  min-height: 100vh;
+  height: auto;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 260px;
+  height: auto;
+  min-width: 260px;
+  border-radius: 10px;
+  background: var(--fondo-sidebar);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+
+.user-Info {
+  text-align: center;
+}
+
+.user-Info h3 {
+  font-weight: bold;
+}
+
+.menu ul {
+  list-style: none;
+}
+
+.menu ul li {
+  margin: 40px 0;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  padding: 12px 15px;
+  font-size: 25px;
+  color: var(--texto-normal);
+  display: block;
+  border-radius: 8px;
+}
+
+.menu ul li a:hover {
+  color: var(--texto-normal);
+  background-color: var(--fondo-principal);
+}
+
+.Cerrar-sesion {
+  margin-top: 30px;
+}
+
+.Cerrar-sesion button {
+  padding: 12px;
+  background-color: var(--color-closed);
+  border-radius: 10px;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  font-size: 25px;
+}
+
+.Cerrar-sesion button:hover{
+  background-color: var(--alerta);
+  color: var(--blanco);
+}
+
+/* Contenido principal */
+.main-content {
+    flex: 1;
+    padding: 35px;
+    background: var(--fondo-principal);
+    overflow-y: auto;
+}
+
+/*Encabbezado Dashboard*/
+.dashboard-header h1 {
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+
+.dashboard-header p {
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+
+/* Alerta stock */
+.Alerta {
+  background: var(--blanco);
+  border: 2px solid var(--alerta);
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 60px;
+  font-size: 20px;
+}
+
+.Alerta a {
+  color:var(--alerta);
+  text-decoration: none;
+  font-weight: bold;
+  
+}
+
+.Alerta a:hover{
+  padding: 10px;
+  color: var(--color-closed);
+}
+
+/* TARJETAS DE MÉTRICAS */
+.metricas {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 80px;
+}
+
+.metricas div {
+  background: var(--blanco);
+  padding: 20px;
+  border-radius: 12px;
+  width: 30%;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+
+.metricas h3 {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.valor {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.positivo { color: var(--positivo);}
+.neutral { color: var(--texto-claro); }
+.negativo { color: var(--alerta); }
+
+/* SECCIONES INFERIORES */
+.bottom-sections {
+  display: flex;
+  gap: 10px;
+}
+
+.bottom-sections div {
+  background: var(--blanco);
+  padding: 25px;
+  border-radius: 12px;
+  width: 80%;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+
+.bottom-sections ul {
+  margin-top: 15px;
+  line-height: 1.6;
+}
+
+/* Estilo de Usuarios*/
+
+/* Contenido general */
+.Usuarios-container {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.usuarios-header h1 {
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+
+.usuarios-header p {
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+
+/* Contenedor 2 */
+.usuarios-container2 {
+  background: var(--blanco);
+  margin-top: 25px;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+/* Encabezado dentro del contenedor */
+.usuarios-container2 .usuarios-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.usuarios-container2{
+  font-size: 20px;
+}
+
+/* Botón Nuevo Usuario */
+.btn-nuevo {
+  background: var(--btn-nuevo);
+  background-color: var(--fondo-principal);
+  padding: 10px 18px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.btn-nuevo span {
+  font-size: 20px;
+}
+
+.btn-nuevo:hover{
+  background-color: var(--positivo);
+  color: var(--blanco);
+}
+
+/* Tarjetas de usuarios */
+.tarjetas-usuario {
+  background-color: var(--fondo-principal);
+  padding: 18px 25px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.usu-info {
+  display: flex;
+  flex-direction:column;
+}
+
+.usu-info span {
+  font-size: 14px;
+  color: var(--gris-texto);
+}
+
+/* ---------- Rol ----------- */
+.rol {
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.rol.admin {
+  background-color: var(--blanco);
+}
+
+
+
+/*Estilo de productos*/
+
+/* Contenido general */
+.productos-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.productos-header h1 {
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+
+.productos-header p {
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+
+/* Contenedor 2 */
+.productos-lista {
+    margin-top: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+}
+
+/* Encabezado dentro del contenedor */
+.productos-lista .productos-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.productos-lista{
+  font-size: 20px;
+}
+.productos-lista p{
+  font-size: 20px;
+}
+
+/* Botón Nuevo Usuario */
+.buscar {
+  margin-top: 20px;
+  background-color: var(--fondo-sidebar);
+  width: 330px;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  border: 1px solid var(--gris-medio);
+  font-size: 15px;
+}
+
+/* Tarjetas de productos */
+.tarjetas-productos{
+  margin-top: 15px;
+  background-color: var(--fondo-principal);
+  padding: 18px 25px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.pro-info strong {
+  display: flex;
+  flex-direction:column;
+}
+
+.pro-info span{
+  flex-direction: column;
+}
+
+.pro-info .precio{
+  display: block;
+  font-size: 20px;
+  color: var(--positivo);
+  font-weight: bold;
+}
+
+/* Estilo del inventario*/
+
+/* Contenido general */
+.inventario-container {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.inventario-header h1 {
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+
+.inventario-header p {
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+
+/* Alerta stock */
+.Alerta-inv {
+  background: var(--blanco);
+  border: 2px solid var(--alerta);
+  padding: 15px;
+  border-radius: 12px;
+  margin-top: 20px;
+  margin-bottom: 60px;
+  font-size: 20px;
+}
+
+.Alerta-inv p {
+    margin: 3px 0;
+}
+
+.Alerta-titulo {
+    font-weight: bold;
+}
+
+.Alerta-inv a {
+  color:var(--alerta);
+  text-decoration: none;
+  font-weight: bold;
+  
+}
+
+.Alerta-inv a:hover{
+  padding: 10px;
+  color: var(--color-closed);
+}
+
+
+/* Contenedor 2 */
+.inventario-container2 {
+    margin-top: 20px;
+    padding: 20px;
+    background: var(--blanco);
+    border-radius: 15px;
+}
+
+/* Encabezado dentro del contenedor */
+.inventario-container2 .inv-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.inv-header{
+  font-size: 20px;
+}
+.inv-header p{
+  font-size: 20px;
+}
+
+/* Tarjetas de inventario */
+.tarjetas-inv{
+  margin-top: 15px;
+  background-color: var(--fondo-principal);
+  padding: 18px 25px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.inv-info strong {
+  display: flex;
+  flex-direction:column;
+}
+
+.inv-info span{
+  flex-direction: column;
+}
+
+.inv-info .vl1{
+  margin: 20px;
+  flex-direction: column;
+  font-size: 20px;
+  color: var(--positivo);
+  font-weight: bold;
+}
+
+/*Menu horizontal*/ /*Comparte estilo con el menu de facturacion y con el de auditoria*/
+.menu-horizontal {
+    display: flex;
+    gap: 15px;
+    background:var(--fondo-principal) ;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.menu-horizontal a {
+    text-decoration: none;
+    background: var(--fondo-oscuro);
+    color: var(--blanco);
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.2s ease;
+}
+
+.menu-horizontal a:hover {
+    background: var(--texto-claro);
+}
+
+/* Boton de agregar al carrito */
+.accion-agregar {
+    display: flex;
+    justify-content: flex-end; 
+    margin-top: 10px;
+}
+
+.agregar {
+    font-size: 20px;
+    padding: 10px 30px;
+    background-color: var(--fondo-oscuro);
+    color: var(--blanco);
+    font-weight: bold;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.agregar:hover{
+  background-color: var(--texto-claro);
+  color: var(--blanco);
+}
+
+/*Boton pagar*/
+.pagar{
+    font-size: 20px;
+    padding: 10px 30px;
+    background-color: var(--positivo);
+    color: var(--fondo-oscuro);
+    font-weight: bold;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.pagar:hover{
+  background-color: var(--texto-claro);
+  color: var(--blanco);
+}
+
+/*Historial de movimientos*/
+
+.movimientos {
+    background: var(--blanco);
+    padding: 25px;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+.movimientos-col {
+    display: flex;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.columna {
+    flex: 1;
+}
+
+.columna h3 {
+    margin-bottom: 15px;
+}
+
+.tarjeta-mov {
+    background: var(--fondo-principal);
+    padding: 18px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.mov-info {
+    flex: 1;
+}
+
+.mov-info p {
+    margin: 0;
+    font-size: 14px;
+    color: var(--texto-claro);
+}
+
+.vl2 {
+    font-weight: bold;
+    color: var(--positivo);
+    font-size: 16px;
+    min-width: 140px;
+    text-align: right;
+}
+
+/*Estilos de facturacion*/
+
+/* Contenedor general */
+.facturacion-container {
+    display: flex;  
+    align-items: flex-start;    
+    width: 100%;
+}
+
+.facturacion-header h1 {
+    margin-bottom: 15px;
+    font-size: 50px;
+}
+
+.facturacion-header p{
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+
+/* Contenedor principal */
+.facturacion-container2 {
+    background: white;
+    padding: 35px;
+    border-radius: 15px;
+    width: 100%;
+    margin-top: 20px;   
+}
+
+/* Hacer dos columnas iguales */
+.fac-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.fac-header h2{
+  font-size: 30px;
+}
+
+
+/* Columnas */
+.fac-columna h3 {
+    margin-bottom: 15px;
+}
+
+.fac-columna {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Lista de facturas */
+.fac-lista ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.fac-lista li {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+
+/* =========================
+   RESPONSIVE – MOBILE/TABLET
+   ========================= */
+@media (max-width: 1024px) {
+
+    /* Ocultar sidebar por defecto */
+    .sidebar {
+        position: fixed;
+        left: -260px;  /* OCULTA */
+        top: 0;
+        height: 100%;
+        z-index: 1000;
+        transition: left .3s ease;
+    }
+
+    /* Sidebar visible cuando se activa */
+    .sidebar.active {
+        left: 0;
+    }
+
+    /* Topbar visible solo en móvil/tablet */
+    .topbar {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding: 15px 20px;
+        background: var(--fondo-sidebar);
+        font-size: 20px;
+        font-weight: bold;
+        box-shadow: var(--sombra-suave);
+        position: sticky;
+        top: 0;
+        z-index: 900;
+    }
+
+    .hamburger {
+        font-size: 30px;
+        cursor: pointer;
+        padding: 5px 12px;
+        background: var(--fondo-principal);
+        border-radius: 8px;
+    }
+
+    /* Ajustar contenido cuando la sidebar está oculta */
+    .main-content {
+        margin-left: 0 !important;
+        padding: 20px;
+    }
+
+    /* Tarjetas (columnas en móvil/tablet) */
+    .metricas {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .metricas div {
+        width: 100%;
+    }
+
+    /* Secciones inferiores */
+    .bottom-sections {
+        flex-direction: column;
+    }
+}
+
+/* =========================
+   PANTALLA GRANDE (desktop)
+   ========================= */
+@media (min-width: 1025px) {
+
+    /* Sidebar visible normal */
+    .sidebar {
+        position: relative;
+        left: 0 !important;
+    }
+
+    /* OCULTAR TOPBAR EN ESCRITORIO */
+    .topbar {
+        display: none !important;
+    }
+
+    /* Contenido principal no se mueve */
+    .main-content {
+        margin-left: 0;
+    }
+}

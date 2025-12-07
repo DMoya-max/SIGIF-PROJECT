@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Facturacion-SIGIF</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+    <div class="topbar">
+          <span class="hamburger" onclick="document.querySelector('.sidebar').classList.toggle('active')">☰</span>
+          Gestión de inventario
+    </div>
+    <div class="facturacion-container">
+          <!-- SIDEBAR VA PRIMERO -->
+        <aside class="sidebar">
+          <div class="logo">
+            <img src="../imagenes/logo.png" alt="">
+          </div>
+
+          <div class="user-Info">
+            <h3>Administrativo</h3>
+            <p>Oficina central</p>
+          </div>
+
+          <nav class="menu">
+            <ul>
+              <li><a href="index.html">Dashboard</a></li>
+              <li><a href="usuarios.html">Usuarios</a></li>
+              <li><a href="productos.html">Productos</a></li>
+              <li><a href="inventario.html">Inventario</a></li>
+              <li><a href="facturacion.html">Facturación</a></li>
+              <li><a href="#">Auditoría</a></li>
+              <li><a href="#">Configuración</a></li>
+            </ul>
+          </nav>
+
+          <div class="Cerrar-sesion">
+            <button>Cerrar sesión</button>
+          </div>
+        </aside>
+       
+      <!-- CONTENIDO PRINCIPAL DE USUARIOS (Enccabezado!) -->
+      <main class="main-content">
+        <header class="facturacion-header">
+            <h1>Facturacion y Pagos</h1>
+            <p>Gestion de facturas, Pagos y reportes de ventas</p>
+        </header>
+
+        <!-- Menu horizontal -->
+        <div class="menu-horizontal">
+            <a href="analisis-financiero.html">Análisis Financiero</a>
+            <a href="reportes-ventas.html">reportes de ventas</a>
+            <a href="facturas.html">Facturas</a>
+        </div>
+
+        <!-- CONTENEDOR DEL LISTADO -->
+        <section class="facturacion-container2">
+            <div class="fac-header">
+                <h2>Análisis Financiero</h2>
+                <p>Métricas avanzadas de rendimiento financiero.</p>
+            </div>
+
+            <div class="fac-grid">
+
+                <!-- Columna izquierda -->
+                  <div class="fac-columna">
+                    <h3>Estado de Facturas</h3>
+                      <ul class="fac-lista">
+                        <li><span>Borradores</span> <span>0</span></li>
+                        <li><span>Enviadas</span> <span>1</span></li>
+                        <li><span>Pagadas</span> <span>1</span></li>
+                        <li><span>Vencidas</span> <span>0</span></li>
+                      </ul>
+                  </div>
+
+                <!-- Columna derecha -->
+                  <div class="fac-columna">
+                    <h3>Productos Más Vendidos</h3>
+                      <ul class="fac-lista">
+                        <li><span>Líquido de Frenos</span> <span>2 vendidos</span></li>
+                        <li><span>Pastillas de Freno</span> <span>2 vendidos</span></li>
+                        <li><span>Kit de Arrastre</span> <span>2 vendidos</span></li>
+                        <li><span>Filtro de Aire</span> <span>2 vendidos</span></li>
+                      </ul>
+                  </div>
+                </div>
+            </div>
+        </section>
+    </main>
+  </div>
+    <script src="script.js"></script>
+</body>
+</html>

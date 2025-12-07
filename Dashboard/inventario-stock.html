@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Inventario-SIGIF</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+    <div class="topbar">
+          <span class="hamburger" onclick="document.querySelector('.sidebar').classList.toggle('active')">☰</span>
+          Gestión de inventario
+    </div>
+    <div class="inventario-container">
+          <!-- SIDEBAR VA PRIMERO -->
+        <aside class="sidebar">
+          <div class="logo"> 
+            <img src="../imagenes/logo.png" alt="">
+          </div>
+
+          <div class="user-Info">
+            <h3>Administrativo</h3>
+            <p>Oficina central</p>
+          </div>
+
+          <nav class="menu">
+            <ul>
+              <li><a href="index.html">Dashboard</a></li>
+              <li><a href="usuarios.html">Usuarios</a></li>
+              <li><a href="productos.html">Productos</a></li>
+              <li><a href="inventario.html">Inventario</a></li>
+              <li><a href="facturacion.html">Facturación</a></li>
+              <li><a href="#">Auditoría</a></li>
+              <li><a href="#">Configuración</a></li>
+            </ul>
+          </nav>
+
+          <div class="Cerrar-sesion">
+            <button>Cerrar sesión</button>
+          </div>
+        </aside>
+       
+      <!-- CONTENIDO PRINCIPAL DE USUARIOS (Enccabezado!) -->
+      <main class="main-content">
+        <header class="inventario-header">
+            <h1>Gestión de inventario</h1>
+            <p>Control de stock, carrito de compras y movimientos</p>
+        </header>
+
+        <!-- Menu horizontal -->
+        <div class="menu-horizontal">
+            <a href="inventario-stock.html">Control de stock</a>
+            <a href="inventario-carrito.html">Carritos de compras</a>
+            <a href="inventario-historial.html">Historial de movimientos</a>
+        </div>
+
+        <!-- Alerta abajo del menu horizonal -->
+        <div class="Alerta-inv">
+          <p class="Alerta-titulo">Productos con stock bajo o agotado:</p>
+          1 productos requieren atención
+          <a href="#">Ver detalles</a>
+        </div>
+
+        <!-- CONTENEDOR DEL LISTADO -->
+        <section class="inventario-container2">
+            <div class="inv-header">
+                <div>
+                    <h2>Estado de inventario</h2>
+                    <p>Productos y niveles de stock actuales</p>
+                </div>
+            </div>
+
+            <!-- Tarjetas de inventario -->
+            <div class="tarjetas-inv">
+                <div class="inv-info">
+                    <strong>Disco de freno</strong>
+                    <div class="extra">
+                        <span>SKU: DIS-HON-CB</span>
+                        <span>Stock: 25  / Mín: 5  </span>
+                        <span class="vl1">$90,000</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tarjetas-inv">
+                <div class="inv-info">
+                    <strong>Llanta delantera</strong>
+                    <div class="extra">
+                        <span>SKU: LLN-MIC-27518</span>
+                        <span>Stock: 0 / Mín: 2 </span>
+                        <span class="vl1">$180,000</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tarjetas-inv">
+                <div class="inv-info">
+                    <strong>Kit de cilindro 150cc</strong>
+                    <div class="extra">
+                        <span>SKU:KIT-CIL-YAM150</span>
+                        <span>Stock: 8  / Mín: 5</span>
+                        <span class="vl1">$280,000</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+  </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Inventario-SIGIF</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+    <div class="topbar">
+          <span class="hamburger" onclick="document.querySelector('.sidebar').classList.toggle('active')">☰</span>
+          Gestión de inventario
+    </div>
+    <div class="inventario-container">
+          <!-- SIDEBAR VA PRIMERO -->
+        <aside class="sidebar">
+          <div class="logo"> 
+            <img src="../imagenes/logo.png" alt="">
+          </div>
+
+          <div class="user-Info">
+            <h3>Administrativo</h3>
+            <p>Oficina central</p>
+          </div>
+
+          <nav class="menu">
+            <ul>
+              <li><a href="index.html">Dashboard</a></li>
+              <li><a href="usuarios.html">Usuarios</a></li>
+              <li><a href="productos.html">Productos</a></li>
+              <li><a href="inventario.html">Inventario</a></li>
+              <li><a href="facturacion.html">Facturación</a></li>
+              <li><a href="#">Auditoría</a></li>
+              <li><a href="#">Configuración</a></li>
+            </ul>
+          </nav>
+
+          <div class="Cerrar-sesion">
+            <button>Cerrar sesión</button>
+          </div>
+        </aside>
+        
+       
+      <!-- CONTENIDO PRINCIPAL DE USUARIOS (Enccabezado!) -->
+      <main class="main-content">
+        <header class="inventario-header">
+            <h1>Gestión de inventario</h1>
+            <p>Control de stock, carrito de compras y movimientos</p>
+        </header>
+
+        <!-- Menu horizontal -->
+        <div class="menu-horizontal">
+            <a href="inventario-stock.html">Control de stock</a>
+            <a href="inventario-carrito.html">Carritos de compras</a>
+            <a href="inventario-historial.html">Historial de movimientos</a>
+        </div>
+
+        <!-- CONTENEDOR DEL LISTADO -->
+        <section class="inventario-container2">
+            <div class="inv-header">
+                <div>
+                    <h2>Historial De Movimientos</h2>
+                    <p>Registro De Entradas y Salidas</p>
+                </div>
+            </div>
+            <div class="movimientos">
+              <h2>Demostrar Movimientos</h2>
+            
+              <div class="movimientos-col">
+
+            <!--  Ultimas entradas -->
+          <div class="columna">
+            
+              <h3>Últimas Entradas</h3>
+
+              <div class="tarjeta-mov">
+                  <div class="mov-info">
+                      <strong>Neumatico Trasero - Cross 21</strong>
+                      <p>Cantidad: 50 unidades</p>
+                      <p>Precio unitario: $90,000</p>
+                  </div>
+              </div>
+
+              <div class="tarjeta-mov">
+                  <div class="mov-info">
+                      <strong>Kit de arrastre</strong>
+                      <p>Cantidad: 15 unidades</p>
+                      <p>Precio unitario: $180,000</p>
+                  </div>
+              </div>
+          </div>
+
+          <!--  Ultimas salidas -->
+          <div class="columna">
+              <h3>Últimas Salidas</h3>
+
+                  <div class="tarjeta-mov">
+                      <div class="mov-info">
+                          <strong>Líquido de frenos</strong>
+                          <p>Motul</p>
+                          <p>$48,000 — Cantidad: 2</p>
+                      </div>
+                      <div class="vl2">$98,000.00</div>
+                  </div>
+
+                  <div class="tarjeta-mov">
+                      <div class="mov-info">
+                        <strong>Filtro de Aire</strong>
+                        <p>Motul</p>
+                        <p>$22,000 — Cantidad: 4</p>
+                      </div>
+                      <div class="vl2">$88,000.00</div>
+                  </div>
+
+                  <div class="tarjeta-mov">
+                      <div class="mov-info">
+                        <strong>Kit Luces LED</strong>
+                        <p>Philips</p>
+                        <p>$85,000 — Cantidad: 1</p>
+                      </div>
+                    <div class="vl2">$85,000.00</div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </section>
+    </main>
+  </div>
+    <script src="script.js"></script>
+</body>
+</html>
