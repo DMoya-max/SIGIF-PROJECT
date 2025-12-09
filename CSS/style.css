@@ -612,11 +612,12 @@ body {
 /* Contenedor principal */
 .facturacion-container2 {
     background: white;
-    padding: 35px;
+    padding: 20px 25px;   /* menos alto */
     border-radius: 15px;
     width: 100%;
-    margin-top: 20px;   
+    margin-top: 20px;
 }
+
 
 /* Hacer dos columnas iguales */
 .fac-grid {
@@ -653,6 +654,94 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 5px 0;
+}
+
+/*TARJETAS DE MÉTRICAS (rep-fac)*/
+.rep-fac {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin: 40px 0;
+}
+
+.fac-tarjetas {
+    background: var(--blanco);
+    padding: 22px;
+    border-radius: 15px;
+    box-shadow: var(--sombra-suave);
+    text-align: left;
+}
+
+.fac-tarjetas h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: var(--texto-normal);
+}
+
+.fac-tarjetas .valor {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: var(--texto-normal);
+}
+
+.fac-tarjetas span {
+    color: var(--texto-claro);
+}
+
+/* Contenedor de reporte - quitar márgenes extras */
+.reporte-ventas {
+  margin-top: 50px;
+  margin-bottom: 0;      /* evita margen inferior extra */
+  padding-bottom: 0 !important;
+}
+
+.reporte-ventas .subtitulo {
+    font-size: 16px;
+    color: var(--texto-claro);
+    margin-bottom: 20px;   /* 🟢 agrega espacio entre subtitulo y tarjeta */
+}
+/* Tarjeta blanca principal del reporte: control de padding/margen */
+.reporte-tarjeta {
+  background: var(--blanco);
+  padding: 30px;         /* padding interior */
+  border-radius: 18px;
+  box-shadow: var(--sombra-suave);
+  margin-bottom: 0 !important;   /* evita espacio debajo de la tarjeta */
+}
+
+.resumen-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+/* Cada pequeño item: ya los tenías, solo reforzados */
+.resumen-item {
+  background: white;
+  padding: 22px 25px;
+  border-radius: 12px;
+  box-shadow: var(--sombra-suave);
+  margin: 0; /* quitamos los márgenes adicionales */
+}
+
+
+/* Estilos de facturas */
+.tabla-facturas {
+    width: 100%;
+    border-collapse: separate; /* permite separación entre filas */
+    border-spacing: 0 12px;    /* separación vertical entre filas */
+    font-size: 16px;
+}
+
+.tabla-facturas th {
+    text-align: left;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.tabla-facturas td:first-child {
+    font-weight: bold;
 }
 
 /* =========================

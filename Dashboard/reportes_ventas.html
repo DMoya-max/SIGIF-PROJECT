@@ -45,47 +45,73 @@
             <h1>Facturacion y Pagos</h1>
             <p>Gestion de facturas, Pagos y reportes de ventas</p>
         </header>
-
+        
         <!-- Menu horizontal -->
         <div class="menu-horizontal">
             <a href="analisis_financiero.html">Análisis Financiero</a>
             <a href="reportes_ventas.html">reportes de ventas</a>
             <a href="facturas.html">Facturas</a>
         </div>
+        
+      <!-- tarjetas metricas -->
+      <section class="rep-fac">
+        <div class="fac-tarjetas">
+          <h3>Ingresos del Mes</h3>
+          <p class="valor">$0.00</p>
+          <span>0 facturas pagadas</span>
+        </div>
 
-        <!-- CONTENEDOR DEL LISTADO -->
-        <section class="facturacion-container2">
-            <div class="fac-header">
-                <h2>Análisis Financiero</h2>
-                <p>Métricas avanzadas de rendimiento financiero.</p>
+        <div class="fac-tarjetas">
+          <h3>Impuestos Recaudados</h3>
+          <p class="valor">$0.00</p>
+          <span>Tasa promedio: 19%</span>
+        </div>
+
+        <div class="fac-tarjetas">
+          <h3>Factura Promedio</h3>
+          <p class="valor">$0.00</p>
+          <span>Por transacción</span>
+        </div>
+
+        <div class="fac-tarjetas">
+          <h3>Facturas Pendientes</h3>
+          <p class="valor">1</p>
+          <span>Por cobrar</span>
+        </div>
+      </section>
+
+      <!-- Reporte de Ventas por Período -->
+      <section class="reporte-ventas">
+        <div class="reporte-tarjeta">
+          <h2>Reporte de Ventas por Período</h2>
+          <p class="subtitulo">Análisis detallado de ventas y facturación</p>
+
+          <h3>Resumen del Período Actual</h3>
+
+          <div class="resumen-grid">
+
+            <div class="resumen-item">
+                <h4>Total Facturado</h4>
+                <p class="monto">$386,000</p>
             </div>
 
-            <div class="fac-grid">
-
-                <!-- Columna izquierda -->
-                  <div class="fac-columna">
-                    <h3>Estado de Facturas</h3>
-                      <ul class="fac-lista">
-                        <li><span>Borradores</span> <span>0</span></li>
-                        <li><span>Enviadas</span> <span>1</span></li>
-                        <li><span>Pagadas</span> <span>1</span></li>
-                        <li><span>Vencidas</span> <span>0</span></li>
-                      </ul>
-                  </div>
-
-                <!-- Columna derecha -->
-                  <div class="fac-columna">
-                    <h3>Productos Más Vendidos</h3>
-                      <ul class="fac-lista">
-                        <li><span>Líquido de Frenos</span> <span>2 vendidos</span></li>
-                        <li><span>Pastillas de Freno</span> <span>2 vendidos</span></li>
-                        <li><span>Kit de Arrastre</span> <span>2 vendidos</span></li>
-                        <li><span>Filtro de Aire</span> <span>2 vendidos</span></li>
-                      </ul>
-                  </div>
-                </div>
+            <div class="resumen-item">
+                <h4>Total Cobrado</h4>
+                <p class="monto">$250,000</p>
             </div>
-        </section>
+
+            <div class="resumen-item">
+                <h4>Por Cobrar</h4>
+                <p class="monto">$756,000</p>
+            </div>
+
+            <div class="resumen-item">
+                <h4>Facturas Totales</h4>
+                <p class="monto">$874,000</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   </div>
     <script src="script.js"></script>
