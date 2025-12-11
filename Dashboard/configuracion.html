@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Configuracion-SIGIF</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+    <div class="topbar">
+          <span class="hamburger" onclick="document.querySelector('.sidebar').classList.toggle('active')">☰</span>
+          Gestión de inventario
+    </div>
+    <div class="config-container">
+          <!-- SIDEBAR VA PRIMERO -->
+        <aside class="sidebar">
+          <div class="logo">
+            <img src="../imagenes/logo.png" alt="">
+          </div>
+
+          <div class="user-Info">
+            <h3>Administrativo</h3>
+            <p>Oficina central</p>
+          </div>
+
+          <nav class="menu">
+            <ul>
+              <li><a href="index.html">Dashboard</a></li>
+              <li><a href="usuarios.html">Usuarios</a></li>
+              <li><a href="productos.html">Productos</a></li>
+              <li><a href="inventario.html">Inventario</a></li>
+              <li><a href="facturacion.html">Facturación</a></li>
+              <li><a href="auditoria.html">Auditoría</a></li>
+              <li><a href="configuracion.html">Configuración</a></li>
+            </ul>
+          </nav>
+
+          <div class="Cerrar-sesion">
+            <button>Cerrar sesión</button>
+          </div>
+        </aside>
+       
+      <!-- CONTENIDO PRINCIPAL DE USUARIOS (Enccabezado!) -->
+    <main class="main-content">
+        <header class="config-header">
+            <h1>Configuración</h1>
+            <p>Configuración general del sistema</p>
+        </header>
+
+        <!-- CONTENEDOR DEL LISTADO -->
+        <section class="config-container2">
+            <div class="conf-header">
+                <div class="img">
+                    <img src="../imagenes/imagen.png" alt="">
+                </div>
+                <h2>Módulo en construcción</h2>
+                <p>Este módulo será implementado en las siguientes fases del desarrollo.</p>
+            </div>
+        </section>                      
+    </main>
+  </div>
+    <script src="script.js"></script>
+</body>
+</html>

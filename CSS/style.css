@@ -699,7 +699,7 @@ body {
 .reporte-ventas .subtitulo {
     font-size: 16px;
     color: var(--texto-claro);
-    margin-bottom: 20px;   /* 🟢 agrega espacio entre subtitulo y tarjeta */
+    margin-bottom: 20px;   /* agrega espacio entre subtitulo y tarjeta */
 }
 /* Tarjeta blanca principal del reporte: control de padding/margen */
 .reporte-tarjeta {
@@ -742,6 +742,69 @@ body {
 
 .tabla-facturas td:first-child {
     font-weight: bold;
+}
+
+/* Estilos de configuracion */
+
+/* Contenedor principal */
+.config-container {
+    display: flex;
+    width: 100%;
+}
+
+/* Contenido */
+.main-content {
+    flex: 1;
+    padding: 30px;
+}
+
+/* Contenedor general */
+.config-container2 {
+    margin-top: 40px;
+    background: var(--blanco);
+    padding: 60px 40px;
+    border-radius: 18px;
+    box-shadow: var(--sombra-suave);
+    width: 100%;
+}
+
+.config-header h1 {
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+
+.config-header p {
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+
+/* Contenido centrado */
+.conf-header {
+    text-align: center;
+}
+
+/* Icono */
+.conf-header .img img {
+    width: 90px;             
+    height: auto;
+    margin: 0 auto 20px auto;
+    display: block;
+}
+
+/* Título */
+.conf-header h2 {
+    font-size: 26px;
+    font-weight: bold;
+    color: var(--texto-normal);
+    margin-bottom: 10px;
+}
+
+/* Descripción */
+.conf-header p {
+    font-size: 16px;
+    color: var(--texto-claro);
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 /* =========================
