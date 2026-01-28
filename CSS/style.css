@@ -39,14 +39,13 @@ body {
 /* SIDEBAR */
 .sidebar {
   width: 260px;
-  height: auto;
+  height: 100vh;
   min-width: 260px;
   border-radius: 10px;
   background: var(--fondo-sidebar);
   padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 .logo img {
@@ -65,13 +64,19 @@ body {
   font-weight: bold;
 }
 
+.menu {
+  flex: 1;
+  overflow-y: auto;
+}
+
 .menu ul {
   list-style: none;
 }
 
 .menu ul li {
-  margin: 40px 0;
+  margin: 12px 0;
 }
+
 
 .menu ul li a {
   text-decoration: none;
@@ -111,7 +116,7 @@ body {
     flex: 1;
     padding: 35px;
     background: var(--fondo-principal);
-    overflow-y: auto;
+    overflow: hidden;
 }
 
 /*Encabbezado Dashboard*/
@@ -297,7 +302,7 @@ body {
 /* Contenido general */
 .productos-container {
   display: flex;
-  min-height: 100vh;
+  height: 100vh;
 }
 
 .productos-header h1 {
@@ -312,10 +317,12 @@ body {
 
 /* Contenedor 2 */
 .productos-lista {
-    margin-top: 20px;
-    padding: 20px;
-    background: white;
-    border-radius: 15px;
+  margin-top: 20px;
+  padding: 20px;
+  background: var(--blanco);
+  border-radius: 15px;
+  height: calc(100vh - 220px); /* ajusta según header */
+  overflow-y: auto;     
 }
 
 /* Encabezado dentro del contenedor */
